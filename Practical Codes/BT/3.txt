@@ -1,0 +1,25 @@
+pragma solidity 0.4.25;
+
+contract Bank
+{
+    int bal;
+    constructor() public 
+    {
+        bal=0;
+    
+    }
+    function getBalance() view public returns (int)
+    {
+        return bal;
+    }
+
+    function Withdraw(int amt) public 
+    {
+        bal=bal- amt;
+    }
+
+    function Deposite(int amt) public 
+    {
+        bal=bal + amt;
+    }
+}
